@@ -1,10 +1,23 @@
 ##REQUIREMENTS: 
-[x] 1
-[ ] 2
-[ ] 3
+
+ - [ ] Make possible to upload more files parallelly 
+ - [ ] Each file has name that HTTP header contains, ex. "XUpload-File: [file.zip]"
+ - [ ] POST request: /api/v1/upload HTTP/1.1
+ - [ ] Host to be: localhost:9090 
+ - [ ] Answear to post query: X-Upload-File: test.zip Content-Length: 1024
+ - [ ] Each upload process should calculate number of uploaded files
+ - [ ] Upload details are available via REST api (GET /api/v1/upload/progress HTTP/1.1 Host: localhost:9090). 
+ Finished upload isn't available there. Data is available in json format (see below).
+ - [ ] Each upload should count time in ms. This data is available and saved during app working time, available on (GET /api/v1/upload/duration Host: localhost:9090), available in format: upload_duration{id=”test.zip-”} 1567.0
+ - [ ] Max number of threads is 8
+ - [ ] Servis should serve 100 parallel uploads of files up to 50 MB 
+ - [ ] Write a test to ensure above requirement
+ - [ ] server timeout podesiti u skladu s prethodnim zahtjevom (not sure...?)
+ - [ ] at the same time app can't upload more files with the same name, but same name file loaded previously can be replaced with new one
 
 ##ORIGINAL SPECIFICATION:
 ###Vacation CalendarFile Upload Service
+
 Zadatak: Potrebno je implementirati HTTP servis za upload proizvoljnih datoteka. Servis omogućava paralelan upload više datoteka. Svaka datoteka ima naziv koji se šalje u HTTP zaglavlju XUpload- File.
 
 Opis zadatka:
