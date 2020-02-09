@@ -1,7 +1,7 @@
-##REQUIREMENTS: 
+ ##REQUIREMENTS: 
 
  - [ ] Make possible to upload more files parallelly 
- - [ ] Each file has name that HTTP header contains, ex. "XUpload-File: [file.zip]"
+ - [ ] Each file has name that HTTP header contains, ex. "XUpload-File: \[file.zip]"
  - [ ] POST request: /api/v1/upload HTTP/1.1
  - [ ] Host to be: localhost:9090 
  - [ ] Answear to post query: X-Upload-File: test.zip Content-Length: 1024
@@ -15,8 +15,8 @@
  - [ ] server timeout podesiti u skladu s prethodnim zahtjevom (not sure...?)
  - [ ] at the same time app can't upload more files with the same name, but same name file loaded previously can be replaced with new one
 
-##ORIGINAL SPECIFICATION:
-###Vacation CalendarFile Upload Service
+ ##ORIGINAL SPECIFICATION:
+ ###Vacation CalendarFile Upload Service
 
 Zadatak: Potrebno je implementirati HTTP servis za upload proizvoljnih datoteka. Servis omogućava paralelan upload više datoteka. Svaka datoteka ima naziv koji se šalje u HTTP zaglavlju XUpload- File.
 
@@ -55,7 +55,7 @@ Host: localhost:9090
 
 upload_duration{id=”test.zip-<timestamp>”} 1567.0
 
-Zahtjevi:
+ ###Zahtjevi:
 - Spring Boot, JDK/JRE 1.8+, Maven
 - Rest API implementirati pomoću spring rest controllera
 - server smije koristiti maksimalno 8 tredova za obradu zahtjeva
