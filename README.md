@@ -1,6 +1,6 @@
 ## REQUIREMENTS: 
 
- - [ ] Make possible to upload more files parallelly 
+ - [x] Make possible to upload more files parallelly 
  - [ ] Each file has name that HTTP header contains, ex. "XUpload-File: \[file.zip]"
  - [ ] POST request: /api/v1/upload HTTP/1.1
  - [ ] Host to be: localhost:9090 

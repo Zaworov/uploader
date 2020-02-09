@@ -43,7 +43,7 @@ public class UploaderController {
     }
 
     // TO DOWNLOAD FILE BY API
-    @GetMapping("/files/{filename:.+}")
+    @GetMapping("/uploadedFiles/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
 
