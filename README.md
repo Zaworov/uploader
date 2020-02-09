@@ -1,10 +1,10 @@
-##REQUIREMENTS: 
-[x] 1
-[ ] 2
-[ ] 3
+# REQUIREMENTS: 
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
 
-##ORIGINAL SPECIFICATION:
-###Vacation CalendarFile Upload Service
+# ORIGINAL SPECIFICATION:
+## Vacation CalendarFile Upload Service
 Zadatak: Potrebno je implementirati HTTP servis za upload proizvoljnih datoteka. Servis omogućava paralelan upload više datoteka. Svaka datoteka ima naziv koji se šalje u HTTP zaglavlju XUpload- File.
 
 Opis zadatka:
