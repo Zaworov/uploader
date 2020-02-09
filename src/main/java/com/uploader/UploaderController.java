@@ -42,6 +42,7 @@ public class UploaderController {
         return "uploadForm";
     }
 
+    // TO DOWNLOAD FILE BY API
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
@@ -52,12 +53,13 @@ public class UploaderController {
     }
 
     @PostMapping("/")
-    public String handleFileUpload(@RequestParam("file") MultipartFile file,
+    public String handleFileUpload(@RequestParam("file") MultipartFile[] files,
                                    RedirectAttributes redirectAttributes) {
-
-        storageService.store(file);
-        redirectAttributes.addFlashAttribute("message",
-                "You successfully uploaded " + file.getOriginalFilename() + "!");
+        for (MultipartFile file : files) {
+            storageService.store(file);
+            redirectAttributes.addFlashAttribute("message",
+                    "You successfully uploaded " + file.getOriginalFilename() + "!");
+        }
 
         return "redirect:/";
     }
